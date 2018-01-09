@@ -17,6 +17,7 @@ int main() {
             if(max<arr[n-1][i])
                 max = arr[n-1][i];
         sum += max;
+        //printf("%ld ",max);
         for(i=n-2;i>=0;i--) {
             long int localMax = 0;
             for(j=0;j<n;j++) {
@@ -25,7 +26,9 @@ int main() {
             }
             if(!localMax)
                 break;
+            //printf("%ld ",localMax);
             sum += localMax;
+            max = localMax;
         }
         if(i<0){
             printf("%ld\n",sum);
